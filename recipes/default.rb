@@ -1,8 +1,23 @@
-#
-# Cookbook Name:: mmonit
-# Recipe:: default
-#
-# Copyright 2013, YOUR_COMPANY_NAME
-#
-# All rights reserved - Do Not Redistribute
-#
+mmonit_install "/opt" do
+    installation_name node[:mmonit][:installation_name]
+    action :install
+    tmp_dir node[:mmonit][:tmp_dir]
+    user node[:mmonit][:user]
+    group node[:mmonit][:group]
+    version node[:mmonit][:version]
+    decompressed_dirname node[:mmonit][:decompressed_dirname]
+    download_url node[:mmonit][:download_url]
+    pid_path node[:mmonit][:pid_path]
+    listen_host node[:mmonit][:listen_host]
+    listen_port node[:mmonit][:listen_port]
+    licence_key node[:mmonit][:licence_key]
+    licence_owner node[:mmonit][:licence_owner]
+    web_admin_pass node[:mmonit][:web_admin_pass]
+    licence_key node[:mmonit][:licence_key]
+    db_type node[:mmonit][:db_type]
+    db_user node[:mmonit][:db_user]
+    db_pass node[:mmonit][:db_pass]
+    mmonit_db_user node[:mmonit][:mmonit_db_user]
+    mmonit_db_pass node[:mmonit][:mmonit_db_pass]
+    db_name node[:mmonit][:db_name]
+end
